@@ -20,4 +20,4 @@ for month , phoneCount in enumerate(monthlySalesList):
     print(f"Cumulative amount : {cumulative}")
     if cumulative>=100000:
         base_pay = base_pay*0.05
-        cumulative=0
+        cumulative=0                
