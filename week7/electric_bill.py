@@ -47,41 +47,37 @@ def below_fiveHundren(unit):
     return bill  # returning the bill
         
 def above_fiveHundred(unit):
-    slab1=100
-    slab2=400
-    slab3=500
-    slab4=600
-    slab5=800
-    slab6=1000
+    slabs=[100,400,500,600,800,1000]
+    charges=[4.50,6.00,8.00,9.00,10.0]
     bill,free_unit=0,100
-    if  unit<=slab1:
+    if  unit<=slabs[0]:
         print("You don't need to pay any charges")
         print(exit(0))
         
-    elif unit>slab1 and unit<=slab2:
-        charges_per_unit=4.50
+    elif unit>slabs[0] and unit<=slabs[1]:
+        charges_per_unit=charges[0]
         unit=unit-free_unit
         bill=unit*charges_per_unit
         
-    elif unit>slab2 and unit<=slab3:
-        charges_per_unit=6.00
+    elif unit>slabs[1] and unit<=slabs[2]:
+        charges_per_unit=charges[1]
         unit=unit-free_unit
-        bill=(100*4.50)+((unit-100)*charges_per_unit)
+        bill=(100*charges[0])+((unit-100)*charges_per_unit)
         
-    elif unit>slab3 and unit<=slab4:  
-        charges_per_unit=8.00
+    elif unit>slabs[2] and unit<=slabs[3]:  
+        charges_per_unit=charges[2]
         unit=unit-free_unit
-        bill=(100*4.50)+(100*6.00)+((unit-200)*charges_per_unit)
+        bill=(100*charges[0])+(100*charges[1])+((unit-200)*charges_per_unit)
         
-    elif unit>slab4 and unit<=slab5:
-        charges_per_unit=9.00
+    elif unit>slabs[3] and unit<=slabs[4]:
+        charges_per_unit=charges[3]
         unit=unit-free_unit
-        bill=(100*4.50)+(100*6.00)+(100*8.00)+((unit-300)*charges_per_unit)
+        bill=(100*charges[0])+(100*charges[1])+(100*charges[2])+((unit-300)*charges_per_unit)
         
-    elif unit>slab5 and unit<=slab6:
-        charges_per_unit=10.00
+    elif unit>slabs[4] and unit<=slabs[5]:
+        charges_per_unit=charges[4]
         unit=unit-free_unit 
-        bill=(100*4.50)+(100*6.00)+(100*8.00)+(100*9.00)+((unit-400)*charges_per_unit)
+        bill=(100*charges[0])+(100*charges[1])+(100*charges[2])+(100*charges[3])+((unit-400)*charges_per_unit)
         
     return bill # returning the bill
 
