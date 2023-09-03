@@ -8,12 +8,15 @@ Above Rs. 15,00,000	                    Rs. 150,000 + 30% on income more than Rs
 """
 incom_taxes=[300000,600000,900000,1200000,1500000]
 tax_percentage=[0.05,0.10,0.15,0.20,0.30]
-salary = int(input("Enter your salary :"))
-for i in range(0,len(incom_taxes)):
-    tax=incom_taxes[i]
-    if salary==tax:
-        print(f"Percentage is {tax_percentage[i]}")
-        break
+if len(incom_taxes)!=len(tax_percentage):
+    print("Length of charges and incomtax are not equal")
+    
+else:
+    salary = int(input("Enter your salary :"))
+    for i in range(0,len(incom_taxes)):
+        if salary==incom_taxes[i]:
+            print(f"Percentage is {tax_percentage[i]}")
+            break
 
 
 
