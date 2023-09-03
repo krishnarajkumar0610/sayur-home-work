@@ -6,25 +6,34 @@ Rs. 9,00,000 to Rs. 12,00,000	        Rs. 45,000 + 15% on income more than Rs. 9
 Rs. 12,00,000 to Rs. 1500,000	        Rs. 90,000 + 20% on income more than Rs. 12,00,000
 Above Rs. 15,00,000	                    Rs. 150,000 + 30% on income more than Rs. 15,00,000
 """
+incom_taxes=[300000,600000,900000,1200000,1500000]
+tax_percentage=[0.05,0.10,0.15,0.20,0.30]
+salary = int(input("Enter your salary :"))
+for i in range(0,len(incom_taxes)):
+    tax=incom_taxes[i]
+    if salary==tax:
+        print(f"Percentage is {tax_percentage[i]}")
+        break
 
 
-salary = int(input("Enter your salary : "))
-if salary <= 300000:
-    tax = "nil"
 
-elif salary> 300000 and salary<=600000:
-    tax = 0.05 * (salary - 300000)
+# salary = int(input("Enter your salary : "))
+# if salary <= 300000:
+#     tax = "nil"
 
-elif salary>600000 and salary<=900000:
-    tax = 15000 + (0.1 * (salary - 600000))
+# elif salary> 300000 and salary<=600000:
+#     tax = 0.05 * (salary - 300000)
 
-elif salary>900000 and salary<=1200000:
-    tax = 45000 + (0.15 * (salary - 900000))
+# elif salary>600000 and salary<=900000:
+#     tax = 15000 + (0.1 * (salary - 600000))
 
-elif salary>1200000 and salary<=1500000:
-    tax = 90000 + (0.2 * (salary - 1200000))
+# elif salary>900000 and salary<=1200000:
+#     tax = 45000 + (0.15 * (salary - 900000))
 
-else:
-    tax = 150000 + (0.3 * (salary - 1500000))
+# elif salary>1200000 and salary<=1500000:
+#     tax = 90000 + (0.2 * (salary - 1200000))
 
-print(f"Income tax : {tax}")
+# else:
+#     tax = 150000 + (0.3 * (salary - 1500000))
+
+# print(f"Income tax : {tax}")
