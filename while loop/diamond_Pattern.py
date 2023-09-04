@@ -1,3 +1,8 @@
+######## Problem 1 ###############
+#Write a program that prints out a diamond shape using $.
+#After printing each line, wait for user input. If the user presses space, continue
+#If the users presses any other key, stop printing. Maximum 10 lines
+
 lines = int(input("Enter number of lines :"))
 number=1
 while(number<=lines):   # this loops run untill number reaches 10. After reaching 10 and executing the loop it will break the loop
