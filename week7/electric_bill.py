@@ -50,36 +50,7 @@ def above_fiveHundred(unit):
     slabs=[100,400,500,600,800,1000]
     charges=[4.50,6.00,8.00,9.00,10.0]
     bill,free_unit=0,100
-    if  unit<=slabs[0]:
-        print("You don't need to pay any charges")
-        print(exit(0))
-        
-    elif unit>slabs[0] and unit<=slabs[1]:
-        charges_per_unit=charges[0]
-        unit=unit-free_unit
-        bill=unit*charges_per_unit
-        
-    elif unit>slabs[1] and unit<=slabs[2]:
-        charges_per_unit=charges[1]
-        unit=unit-free_unit
-        bill=(100*charges[0])+((unit-100)*charges_per_unit)
-        
-    elif unit>slabs[2] and unit<=slabs[3]:  
-        charges_per_unit=charges[2]
-        unit=unit-free_unit
-        bill=(100*charges[0])+(100*charges[1])+((unit-200)*charges_per_unit)
-        
-    elif unit>slabs[3] and unit<=slabs[4]:
-        charges_per_unit=charges[3]
-        unit=unit-free_unit
-        bill=(100*charges[0])+(100*charges[1])+(100*charges[2])+((unit-300)*charges_per_unit)
-        
-    elif unit>slabs[4] and unit<=slabs[5]:
-        charges_per_unit=charges[4]
-        unit=unit-free_unit 
-        bill=(100*charges[0])+(100*charges[1])+(100*charges[2])+(100*charges[3])+((unit-400)*charges_per_unit)
-        
-    return bill # returning the bill
+    
 
 print("Online TNEB Monthly Bill Calculator - 2023 to 2024 ")
 name = input("Enter your name :")
@@ -92,3 +63,67 @@ elif unit>500:
 else:
     print(f"Invalid unit {unit}") # unit is < 0 invalit unit
 print(f"Your units {unit} and total bill amount is : {bill}")
+
+
+
+
+
+
+
+
+
+
+
+# if  unit<=slabs[0]:
+#         print("You don't need to pay any charges")
+#         print(exit(0))
+        
+#     elif unit>slabs[0] and unit<=slabs[1]:
+#         charges_per_unit=2.25
+#         print("Energy charges after Govt's subsidy and your unit is in between 101 to 200")     
+#         unit=unit-free_unit  
+#         bill=unit*(charges_per_unit)
+        
+#     elif unit>slabs[1] and unit<=slabs[2]:
+#         charges_per_unit=4.50
+#         unit=unit-free_unit
+#         bill=(100 * 2.25)+((unit-100)*charges_per_unit)
+        
+#     elif unit>slabs[2] and unit<=slabs[3]:
+#         charges_per_unit=6.00
+#         unit=unit-free_unit
+#         bill=(100*2.25)+(100*4.50)+((unit-200)*charges_per_unit)
+        
+#     return bill  # returning the bill
+
+
+# if  unit<=slabs[0]:
+#         print("You don't need to pay any charges")
+#         print(exit(0))
+        
+#     elif unit>slabs[0] and unit<=slabs[1]:
+#         charges_per_unit=charges[0]
+#         unit=unit-free_unit
+#         bill=unit*charges_per_unit
+        
+#     elif unit>slabs[1] and unit<=slabs[2]:
+#         charges_per_unit=charges[1]
+#         unit=unit-free_unit
+#         bill=(100*charges[0])+((unit-100)*charges_per_unit)
+        
+#     elif unit>slabs[2] and unit<=slabs[3]:  
+#         charges_per_unit=charges[2]
+#         unit=unit-free_unit
+#         bill=(100*charges[0])+(100*charges[1])+((unit-200)*charges_per_unit)
+        
+#     elif unit>slabs[3] and unit<=slabs[4]:
+#         charges_per_unit=charges[3]
+#         unit=unit-free_unit
+#         bill=(100*charges[0])+(100*charges[1])+(100*charges[2])+((unit-300)*charges_per_unit)
+        
+#     elif unit>slabs[4] and unit<=slabs[5]:
+#         charges_per_unit=charges[4]
+#         unit=unit-free_unit 
+#         bill=(100*charges[0])+(100*charges[1])+(100*charges[2])+(100*charges[3])+((unit-400)*charges_per_unit)
+        
+#     return bill # returning the bill
