@@ -13,7 +13,7 @@ computerNo = random.randint(3, 9)   # storing the random number from 3 to 9
 
 attempt = 0 # used to count the number of attempts to guess the number
 
-while(True):        # always running the loops until guessing the correct number
+while(True):# always running the loops until guessing the correct number
     
     attempt +=1
     userNo = int(input("Enter your guessing number :"))  # asking user to guess number
