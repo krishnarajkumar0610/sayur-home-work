@@ -6,19 +6,37 @@ Rs. 9,00,000 to Rs. 12,00,000	        Rs. 45,000 + 15% on income more than Rs. 9
 Rs. 12,00,000 to Rs. 1500,000	        Rs. 90,000 + 20% on income more than Rs. 12,00,000
 Above Rs. 15,00,000	                    Rs. 150,000 + 30% on income more than Rs. 15,00,000
 """
-incom_taxes=[300000,600000,900000,1200000,1500000]
-tax_percentage=[0.05,0.10,0.15,0.20,0.30]
-if len(incom_taxes)!=len(tax_percentage):
-    print("Length of charges and incomtax are not equal")
+# incom_taxes=[300000,600000,900000,1200000,1500000]
+# tax_percentage=[0.05,0.10,0.15,0.20,0.30]
+# if len(incom_taxes)!=len(tax_percentage):
+#     print("Length of charges and incomtax are not equal")
     
-else:
-    salary = int(input("Enter your salary :"))
-    for i in range(0,len(incom_taxes)):
-        if salary==incom_taxes[i]:
-            print(f"Percentage is {tax_percentage[i]}")
-            break
-
-
+# else:
+#     salary = int(input("Enter your salary :"))
+#     for i in range(0,len(incom_taxes)):
+#         if salary<=incom_taxes[i]:
+#             print(f"Percentage is {tax_percentage[i]}")
+#             break
+taxable_income = int(input("Enter the amount : "))
+slabs = [250000 , 500000 , 1000000]
+tax_per = [0.05 , 0.2 , 0.3]
+cumulative_tax = 0
+for i in range(0,len(slabs)):
+    print("Cummulative Tax is :",cumulative_tax)
+    if taxable_income <= slabs[i]:
+        if i > 0 :
+             tax = cumulative_tax + (taxable_income - slabs[i - 1])*tax_per[i]
+        else :
+            tax = taxable_income * tax_per[i]
+        break
+          
+    else:
+        if i > 0 :
+            cumulative_tax = cumulative_tax + (slabs[i] - slabs[i -1]) * tax_per[i]
+        else :
+            cumulative_tax = cumulative_tax + (slabs[i]*tax_per[i])
+print(f"Your tax amount is :{tax}") 
+                    
 
 # salary = int(input("Enter your salary : "))
 # if salary <= 300000:
