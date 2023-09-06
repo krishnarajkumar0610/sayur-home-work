@@ -17,44 +17,54 @@ Above Rs. 15,00,000	                    Rs. 150,000 + 30% on income more than Rs
 #         if salary<=incom_taxes[i]:
 #             print(f"Percentage is {tax_percentage[i]}")
 #             break
-taxable_income = int(input("Enter the amount : "))
-slabs = [250000 , 400000,500000 , 1000000]
-tax_per = [0.05 , 0.2 , 0.3]
-cumulative_tax = 0
-for i in range(0,len(slabs)):
-    print("Cummulative Tax is :",cumulative_tax)
-    if taxable_income <= slabs[i]:
-        if i > 0 :
-             tax = cumulative_tax + (taxable_income - slabs[i - 1])*tax_per[i]
-        else :
-            tax = taxable_income * tax_per[i]
-        break
+# taxable_income = int(input("Enter the amount : "))
+# slabs = [250000 , 400000,500000 , 1000000]
+# tax_per = [0.05 , 0.2 , 0.3]
+# cumulative_tax = 0
+# for i in range(0,len(slabs)):
+#     print("Cummulative Tax is :",cumulative_tax)
+#     if taxable_income <= slabs[i]:
+#         if i > 0 :
+#              tax = cumulative_tax + (taxable_income - slabs[i - 1])*tax_per[i]
+#         else :
+#             tax = taxable_income * tax_per[i]
+#         break
           
-    else:
-        if i > 0 :
-            cumulative_tax = cumulative_tax + (slabs[i] - slabs[i -1]) * tax_per[i]
-        else :
-            cumulative_tax = cumulative_tax + (slabs[i]*tax_per[i])
-print(f"Your tax amount is :{tax}") 
+#     else:
+#         if i > 0 :
+#             cumulative_tax = cumulative_tax + (slabs[i] - slabs[i -1]) * tax_per[i]
+#         else :
+#             cumulative_tax = cumulative_tax + (slabs[i]*tax_per[i])
+# print(f"Your tax amount is :{tax}") 
                     
 
-# salary = int(input("Enter your salary : "))
-# if salary <= 300000:
-#     tax = "nil"
+salary = int(input("Enter your salary : "))
+if salary <= 300000:
+    tax = "nil"
 
-# elif salary> 300000 and salary<=600000:
-#     tax = 0.05 * (salary - 300000)
+elif salary> 300000 and salary<=600000:
+    tax = 0 + (0.05 * (salary - 300000))
 
-# elif salary>600000 and salary<=900000:
-#     tax = 15000 + (0.1 * (salary - 600000))
+elif salary>600000 and salary<=900000:
+    tax = 15000 + (0.1 * (salary - 600000))
 
-# elif salary>900000 and salary<=1200000:
-#     tax = 45000 + (0.15 * (salary - 900000))
+elif salary>900000 and salary<=1200000:
+    tax = 45000 + (0.15 * (salary - 900000))
 
-# elif salary>1200000 and salary<=1500000:
-#     tax = 90000 + (0.2 * (salary - 1200000))
+elif salary>1200000 and salary<=1500000:
+    tax = 90000 + (0.2 * (salary - 1200000))
 
-# else:
-#     tax = 150000 + (0.3 * (salary - 1500000))
+else:
+    tax = 150000 + (0.3 * (salary - 1500000))
+salary = int(input())   
+slabs=[300000,600000,900000,1200000,1500000]
+percentage=[0.05,0.1,0.15,0.2,0.3]
+previous_tax=[0,15000,45000,90000,150000]    
+tax=0
+for i in range(0,len(slabs)):
+    if salary<=slabs[i]:
+        tax = previous_tax[i] + (percentage[i] * (salary - slabs[i]))
 
-# print(f"Income tax : {tax}")
+
+
+print(f"Income tax : {tax}")
