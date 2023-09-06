@@ -16,6 +16,7 @@ while(number<=lines):   # this loops run untill number reaches 10. After reachin
 
 
 
+
 # lines = int(input("Enter number of lines :"))
 # number=1
 # temp_num=number
