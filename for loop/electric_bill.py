@@ -18,33 +18,21 @@ Power Range	 for above 500 Per unit(₹)
 801-1000	pay Rs:10.00   per unit'''
 
 def below_fiveHundren(unit):
-    slab1=100
-    slab2=200
-    slab3=400
-    slab4=500
-    bill=0
-    free_unit=slab1
-    if  unit<=100:
-        print("You don't need to pay any charges")
-        print(exit(0))
-        
-    elif unit>slab1 and unit<=slab2:
-        charges_per_unit=2.25
-        print("Energy charges after Govt's subsidy and your unit is in between 101 to 200")     
-        unit=unit-free_unit  
-        bill=unit*(charges_per_unit)
-        
-    elif unit>slab2 and unit<=slab3:
-        charges_per_unit=4.50
-        unit=unit-free_unit
-        bill=(100 * 2.25)+((unit-100)*charges_per_unit)
-        
-    elif unit>slab3 and unit<=slab4:
-        charges_per_unit=6.00
-        unit=unit-free_unit
-        bill=(100*2.25)+(100*4.50)+((unit-200)*charges_per_unit)
-        
-    return bill  # returning the bill
+    units=[(0,100),(101,200),(201,400),(401,500)]
+    charges=[0,2.25,4.5,6.00]
+    print(f"Your unit before reducing free units {units}")
+    print(f"Your unit after reducing free units {units}")
+    for i in range(len(units)):
+        starting_unit,ending_unit=units[i]
+        if unit<=starting_unit:
+            print("You don't need to pay amount")
+            break
+        elif unit<=ending_unit:
+            bill=bill+(unit*charges[i])
+        else:
+            if(unit>0):
+                bill=bill+(unit*charges[i])
+                unit-=100
         
 def above_fiveHundred(unit):
     slabs=[100,400,500,600,800,1000]

@@ -18,7 +18,7 @@ Above Rs. 15,00,000	                    Rs. 150,000 + 30% on income more than Rs
 #             print(f"Percentage is {tax_percentage[i]}")
 #             break
 taxable_income = int(input("Enter the amount : "))
-slabs = [250000 , 500000 , 1000000]
+slabs = [250000 , 400000,500000 , 1000000]
 tax_per = [0.05 , 0.2 , 0.3]
 cumulative_tax = 0
 for i in range(0,len(slabs)):
