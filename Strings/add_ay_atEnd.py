@@ -8,8 +8,6 @@ inputSentence = input("Enter your sentence :")
 pigLatinKey = 'ay'
 sentecnces=inputSentence.split(" ")
 sentence=""
-count=0
-b=True
 for word in sentecnces: #gets the word in a sentence
     #take the first char
     firstChar = word[0] # storing the 1st character from the word into firstChar variable
