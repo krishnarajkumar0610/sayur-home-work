@@ -12,9 +12,15 @@ count=0
 b=True
 for word in sentecnces: #gets the word in a sentence
     #take the first char
-    firstChar = word[0] # storing the 1st character from the word into firstChar variable  
-    sentence = sentence+ word[1:] + firstChar + pigLatinKey
-    sentence+=" "    
-   
+    firstChar = word[0] # storing the 1st character from the word into firstChar variable
+    if (word.isalpha()):   
+        sentence = sentence+ word[1:] + firstChar + pigLatinKey
+        sentence+=" " 
+    else:
+        print("*"*10)
+        print(f"{word} contains numbers in this word")   
+        print("*"*10)
+print("-"*10)
 print(f"Final sentence is {sentence}") #FillinMissingCode)
+print("-"*10)
         
