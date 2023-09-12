@@ -1,5 +1,5 @@
 ########## Program 4
-#PigLatin - From the input string, for each word, remove the first chars until a vowek, add it to the end of the word
+#PigLatin - From the input string, for each word, remove the first chars until a vowel, add it to the end of the word
 #and add 'ay' to it.
 #eg I am Python
 #answer Iay maay nPythoay (in Python 'o' is the first vowel)
@@ -18,6 +18,14 @@ for word in words: #gets the word in a sentence
         if char in vowels:
             first_vowel_index = index
             break
-    sentence = sentence + word[first_vowel_index+1:] + word[:first_vowel_index + 1] + pigLatinKey
-    sentence+=" "
+    # here using string slicing to add words in sentence
+    '''word[first_vowel_index+1:] is store remaining letters from words after the index+1 '''
+    '''word[:first_vowel_index + 1] is stores the letters from words before the index+1 '''
+    sentence = sentence + word[first_vowel_index+1:] +word[:first_vowel_index + 1] + pigLatinKey    # finally adding the ay at end
+    sentence+=" "   # adding space at end of each word
 print(f"Final sentence is {sentence}")
+
+# OUTPUT
+
+# Enter the string : I am Python
+# Final sentence is iay maay npythoay 
