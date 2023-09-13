@@ -5,7 +5,6 @@
 #answer Iay maay nPythoay (in Python 'o' is the first vowel)
 
 inputSentence = input("Enter the string : ")
-inputSentence=inputSentence.lower()
 pigLatinKey = 'ay'
 vowels = ['a','e','i','o','u']
 words=inputSentence.split(" ")
@@ -15,7 +14,7 @@ for word in words: #gets the word in a sentence
     first_vowel_index = 0
     #FillinMissingCode - check if the word has more than one char
     for index, char in enumerate(word): #returns both the index and the char in the word
-        if char in vowels:
+        if char.lower() in vowels:
             first_vowel_index = index
             break
     # here using string slicing to add words in sentence
