@@ -9,6 +9,9 @@ pigLatinKey = 'ay'
 vowels = ['a','e','i','o','u']
 words=inputSentence.split(" ")
 sentence=""
+
+#for word in inputSentence.split():
+
 for word in words: #gets the word in a sentence
     #take the first chars until a vowel
     first_vowel_index = 0
