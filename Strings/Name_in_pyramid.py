@@ -18,10 +18,18 @@ for i in range(len(myName)):    # stoing index values of myname in 'i'
 #OUTPUT
 
 # Enter your name :krishna
-# k      
-# kr     
-# kri    
-# kris   
-# krish  
-# krishn 
-# krishna
+
+# s
+# sa
+# say
+# sayu
+# sayur
+# sayur 
+# sayur l
+# sayur le
+# sayur lea
+# sayur lear
+# sayur learn
+# sayur learni
+# sayur learnin
+# sayur learning
