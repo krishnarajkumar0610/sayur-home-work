@@ -5,13 +5,14 @@
 #      eg username : myname@sayur.com. password - mnamesay123
 
 name = input("Enter your name & contain the char @ and .com or .edu or .tech or org at the end :")
+password=input("Enter your password : ")
 special_char = "@"  # initializing special character "@"
 name_conditions=[".com",".edu",".tech","org"]  # initialing all conditions we need 
 first_let=name[0]
 third_let=name[2]
 lastThree_let=""
 company_name="sayur"
-check_name,check_password=False,False
+check_name=False
 
 for i in range(len(name)):
     if name[i] in special_char:
@@ -23,7 +24,13 @@ for i in range(len(name)):
                     break
         break
 if check_name:
-    password=first_let+third_let+lastThree_let+company_name[:3]+"123"
-    print(f"It is perfect user name {name} and password is {password}")    
+    reference_password=first_let+third_let+lastThree_let+company_name[:3]+"123"
+    if password in reference_password:
+        print(f"It is valid user name {name} and valid password  {password}") 
+    else:
+        print(f"Not a valid password {password}")        
 else:
     print(f"It is not perfect user name {name} so cant generate password")
+    
+# OUTPUT
+# It is perfect user name myname@sayur.com and password is mnamesay123        
