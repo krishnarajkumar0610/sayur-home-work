@@ -15,7 +15,7 @@ while True:
     for i in range(len(Cafe_Menu)):
         if (item==Cafe_Menu[i]):
             quantity = int(input(f"Enter number of {item} you need ? "))
-            order=str(quantity)+" "+item            
+            order=str(quantity)+" "+item+" and it price is "+str(quantity*Cafe_price[i])          
             total=total+(Cafe_price[i]*quantity)
             ordered_list.append(order)
             b=False
@@ -56,7 +56,7 @@ Enter 1 to cancel order or 0 to continue ordeer :0
 Enter your food item :applejuice
 Sorry sir...applejuice is not available
 Enter 1 to cancel order or 0 to continue ordeer :1
-Your Ordered list : ['5 tea', '5 coffee', '5 greentea', '5 blacktea']
+Your Ordered list : ['5 tea and it price is 75', '5 coffee and it price is 100', '5 greentea and it price is 150', '5 blacktea and it price is 225']
 Your total bill amount is : 550
 You had get profit your total profit = 550 is > total invested amount per day = 500
 
@@ -66,7 +66,7 @@ OUTPUT - 2
 ----------
 
 Enter your food item :tea
-Enter number of tea you need ? 3
+Enter number of tea you need ? 2
 Enter 1 to cancel order or 0 to continue ordeer :0
 
 Enter your food item :coffee
@@ -78,15 +78,15 @@ Enter number of greentea you need ? 2
 Enter 1 to cancel order or 0 to continue ordeer :0
 
 Enter your food item :blacktea
-Enter number of blacktea you need ? 1
+Enter number of blacktea you need ? 2
 Enter 1 to cancel order or 0 to continue ordeer :0
 
-Enter your food item :applejuice
-Sorry sir...applejuice is not available
+Enter your food item :apple juice
+Sorry sir...apple juice is not available
 Enter 1 to cancel order or 0 to continue ordeer :1
-Your Ordered list : ['3 tea', '2 coffee', '2 greentea', '1 blacktea']
-Your total bill amount is : 190
-You had loss because your total profit = 190 is < total invested amount per day = 500
+Your Ordered list : ['2 tea and it price is 30', '2 coffee and it price is 40', '2 greentea and it price is 60', '2 blacktea and it price is 90']
+Your total bill amount is : 220
+You had loss because your total profit = 220 is < total invested amount per day = 500
 
 ----------
 
