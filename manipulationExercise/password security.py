@@ -22,6 +22,7 @@ while True:
         break
     else:   # if length is <8
         print(f"Password is lessthan 8 characters. Try again") 
+        
 if count_alph==1 and count_nums==1 and count_spec==1:   # if alpha and num and spec char contains only 1 of each password is "OK"
     print(f"Your password is ok")
 elif (count_alph>1 and count_alph<=3) and (count_nums>1 and  count_nums<=2 and count_spec>=1):
@@ -29,7 +30,7 @@ elif (count_alph>1 and count_alph<=3) and (count_nums>1 and  count_nums<=2 and c
     print(f"Password is strong")
 else:
     print(f"Your password only contains {password}. Not having mixed characters,integers,special characters")
-    
+    exit(0)
 if len(password)>=16:   # if lenght is 16 it is strong password
     print(f"Password is very strong and its length is {len(password)}")
 elif len(password)==8:
