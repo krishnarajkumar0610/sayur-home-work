@@ -57,19 +57,22 @@ while True:
     else:   # if length is <8
         print(f"Password is lessthan 8 characters. Try again") 
         
-if count_alph==1 and count_nums==1 and count_spec==1:   # if alpha and num and spec char contains only 1 of each password is "OK"
-    print(f"Your password is ok")
-elif count_alph>=3 and count_nums>=2 and count_spec>=1   :
+if count_alph>=1 and count_nums>=1 and count_spec>=1:   # if alpha and num and spec char contains only 1 of each password is "OK"
+    #print(f"Your password is ok")
+    if count_alph>=3 and count_nums>=2 and count_spec>=1   :
     # when alpha count  > 1 and alpha count <=3 and num count >1 and  num count <=2 and spec char >=1 then it is strong password
-    print(f"Password is strong")
+        if len(password)>=16:
+            print(f"Password is very strong {password}")
+        else:
+            print(f"Password is strong")
+    else:
+        print("Password is ok")
 else:
-    print(f"Your password only contains {password}. Not having mixed characters,integers,special characters")
-    exit(0)
-if len(password)>=16:   # if lenght is 16 it is strong password
-    print(f"Password is very strong and its length is {len(password)}")
-elif len(password)==8:
-    print(f"Password is strong and its length is {len(password)}")
-print("-"*30)
+    if pass_length==count_alph or pass_length==count_nums or pass_length==count_spec:
+        print("Password is weak")
+    else:
+        print("Password is failing in all conditions....")
+        exit(0)
 print(f"Number of alphas in password is {count_alph}")
 print(f"Number of digits in password is {count_nums}")
 print(f"Number of special chars in password is {count_spec}")
