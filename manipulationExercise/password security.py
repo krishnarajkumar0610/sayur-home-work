@@ -5,13 +5,12 @@
 #  Very strong - same as strong, but at least 16 count
 # All passwords must be at least 8 chars long. You can use RegEx if you want.
 
-count=0
+pass_length=0
 count_alph,count_nums,count_spec=0,0,0
 while True:
-    password=input("Enter password (note : it length should be 8 or >8 and atleast <=16")
-    for i in range(len(password)):
-        count+=1
-    if count>=8:
+    password=input("Enter password (note : it length should be 8 or >8 and atleast <=16 : ")  
+    pass_length=len(password)
+    if pass_length>=8:
         for i in range(len(password)):
             charNum=int(ord(password[i]))
             if password[i].isalpha():
