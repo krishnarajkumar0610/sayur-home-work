@@ -2,7 +2,7 @@
   # Write a program to run a cafe
   #  Cafe should have inventory, sales data and profit
 
-total_costPrize=500
+today_investment=500
 Cafe_Menu=["coffee","tea","greentea","blacktea"]
 ordered_list=[]
 Cafe_price=[20,15,30,45]
@@ -27,10 +27,10 @@ while True:
     print()
 print(f"Your Ordered list : {ordered_list}")
 print(f"Your total bill amount is : {total}")
-if total<total_costPrize:
-    print(f"You had loss because your total profit = {total} is < total invested amount per day = {total_costPrize}")
-elif total>total_costPrize:
-    print(f"You had get profit your total profit = {total} is > total invested amount per day = {total_costPrize}")
+if total<today_investment:
+    print(f"You had loss because your total amount = {total} is < total invested amount per day = {today_investment} \n loss amount is {today_investment-total}")
+elif total>today_investment:
+    print(f"You had get profit your total amount = {total} is > total invested amount per day = {today_investment} \n profit amount is {total-today_investment}")
     
     
 ''' 
