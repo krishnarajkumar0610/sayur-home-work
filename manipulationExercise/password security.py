@@ -30,4 +30,8 @@ if len(password)>=16:
     print(f"Password is very strong and its length is {len(password)}")
 elif len(password)==8:
     print(f"Password is strong and its length is {len(password)}")
-print(f"Number of alphas in password is {count_alph} \n Number of digits in password is {count_nums} \n Number of special chars in password is {count_spec}")
+print("-"*30)
+print(f"Number of alphas in password is {count_alph}")
+print(f"Number of digits in password is {count_nums}")
+print(f"Number of special chars in password is {count_spec}")
+print("-"*30)
