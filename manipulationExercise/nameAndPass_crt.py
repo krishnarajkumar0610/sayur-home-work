@@ -12,7 +12,6 @@ while True:
     first_let=name[0]   # taking the 0th index char of the compant name
     third_let=name[2]   # taking the 1st index char of the compant name
     lastThree_let=""    # initializing stiring variable for last 3 letters
-    check_name=False
     if name.rfind(special_char) and (name.endswith(".com") or name.endswith(".edu") or name.endswith(".tech") or name.endswith(".org")):
         # this if is 1st it checks "@" in the name and checks name ends with .com or .tech or .edu or .org 
         specialChar_index=name.rfind(special_char)  # storing the "@" char index
