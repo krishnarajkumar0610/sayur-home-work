@@ -19,7 +19,8 @@ while True:
         # storing thr last 3 chars of the name before the char of "@"
         print("While giving password you must give like 1st char of your name,3rd char,and last 3 chars of name before @ special char, 1st 3 chars of your compant name and ends with any three number")
         password=input("Enter your password : ")    # entering the password
-        reference_password=first_let+third_let+lastThree_let+company_name[:3]+password[-3:]  # it automatically generate the password
+        reference_password=first_let+third_let+lastThree_let+company_name[:3]+password[-3:]  
+        # it automatically generate the password
         if password in reference_password:  # if password is same as reference password
             print(f"Correct username {name}")   # user name and password are correct
             print(f"Correct password {password}")
@@ -27,7 +28,8 @@ while True:
         else:
             print(f"Incorrect password {password}. Try again") # password is wroung but name is correct            
     else:
-        print(f"Not a valid user name {name}. Try again")  # when name not contains @ or ends with .com or .tech or .edu or .org it is invalid name
+        print(f"Not a valid user name {name}. Try again")  
+        # when name not contains @ or ends with .com or .tech or .edu or .org it is invalid name
         
     
 # OUTPUT
