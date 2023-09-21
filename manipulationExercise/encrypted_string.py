@@ -18,3 +18,9 @@ for i in range(len(encry_string)):          # this loop for traverse the full St
         
     else:               # is not digit then it is character so adding the letter to word variable   
         word+=encry_string[i]
+
+
+# OUTPUT
+
+# Enter the encrypted string : ac2bd3
+# acacbdbdbd
