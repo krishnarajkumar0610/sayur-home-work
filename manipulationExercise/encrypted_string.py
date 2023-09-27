@@ -6,17 +6,25 @@
 encry_string = input("Enter the encrypted string : ")   # asking the user to enter the String
 word="" # initializing the word variable to store the letters of the String
 
-for i in range(len(encry_string)):          # this loop for traverse the full String
+answer=[]
+for i in range(len(encry_string)):  
     
-    if encry_string[i].isdigit():        # checking each letter is digit or not. if digit it is true
+    spec_char = ord(encry_string[i])    # converting each chars as acssi value
+    
+    if (spec_char>= 33 and spec_char <=47) or (spec_char >=58 and spec_char <=64):  
+        # checking each chars wheather it is special char or not
+        word=""
+        continue        
+    
+    elif encry_string[i].isdigit():        # checking each letter is digit or not. if digit it is true
         
         num = int(encry_string[i])  # converting into number and stored in num
         
-        print(word*num,end='')  # printing the letters stored in word variable with num of times 
+        answer.append(word*num) # printing the letters stored in word variable with num of times 
         
         word=""             # again changing it into empty String
         
-    else:               # is not digit then it is character so adding the letter to word variable   
+    else:   # is not digit then it is character so adding the letter to word variable   
         word+=encry_string[i]
 
 
@@ -24,3 +32,5 @@ for i in range(len(encry_string)):          # this loop for traverse the full St
 
 # Enter the encrypted string : ac2bd3
 # acacbdbdbd
+
+print(answer)
