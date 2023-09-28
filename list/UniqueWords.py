@@ -9,6 +9,8 @@ def check(word,words):  # this method is to check the list
 
 sentence = input("Enter your sentence : ")  # asking input
 
+sentence=sentence.lower()
+
 sentence = sentence.split(" ")  # spliting it into list by spacing
 
 unique_words=[]
@@ -18,4 +20,11 @@ for i in range(len(sentence)):  # to traverse the list
         unique_words.append(sentence[i])  # appending word in final list
     else:
         continue
-print(f"Unique list : {unique_words}")
+print(f"\nUnique list : {unique_words}")
+
+
+# OUTPUT 
+
+# Enter your sentence : I am krishna. I am working as s/w developer at zoho. As i am also freelancer
+
+# Unique list : ['i', 'am', 'krishna.', 'working', 'as', 's/w', 'developer', 'at', 'zoho.', 'also', 'freelancer']
