@@ -1,3 +1,7 @@
+# 1. From a given passage extract unique words and print them.
+# Accept the passage as an input from the user
+
+
 def check(word,words):  # this method is to check the list
     if word in words:   # if word in words list
         return True # return True
