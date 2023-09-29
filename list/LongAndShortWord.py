@@ -9,7 +9,8 @@ sentence = input("Enter a sentence : ")
 sentence = sentence.split() # Split the passage into words
 
 # Initialize variables to store the longest and shortest words
-longest_word = shortest_word = sentence[0]
+longest_word = sentence[0]
+shortest_word = sentence[0]
 
 # Iterate through the words to find the longest and shortest words
 for word in sentence:
