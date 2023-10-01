@@ -9,4 +9,12 @@ def calculate(n):
     return count
 
 n = int(input("Enter a Number : ")) # asking input 
-print(f"Number is reached 1 after these number of iterations :{calculate(n)}")
+count_num1=calculate(n)
+
+n = int(input("Enter a Number : ")) # asking input 
+count_num2=calculate(n)
+
+if count_num1<count_num2:
+    print(f"Count number1 is less count")
+else:
+    print(f"Count number2 is less count")
