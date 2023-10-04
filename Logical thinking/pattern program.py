@@ -10,9 +10,7 @@ for row in range(1,rows+1): # to traverse the rows
     total_str = front_back+chr(let)+front_back  # adding front_back + input letter + front_back
     print(total_str)    # printing the total string after adding the string
     front_back=""   # after printing clearing the string
-    
-    for i in range(len(total_str)): # adding characters to the front_back variable to print in next row
-        front_back+=total_str[i]
+    front_back=total_str
     let+=1  # incrementing the number +1 so i can print next next characters
     
     
