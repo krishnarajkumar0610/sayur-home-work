@@ -11,6 +11,8 @@ for row in range(1,rows+1): # to traverse the rows
     print(total_str)    # printing the total string after adding the string
     front_back=""   # after printing clearing the string
     front_back=total_str
+    if let==122:
+        let=96
     let+=1  # incrementing the number +1 so i can print next next characters
     
     
