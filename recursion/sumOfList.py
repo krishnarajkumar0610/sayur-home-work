@@ -1,12 +1,15 @@
-def rev(sen,n):
-    if len(sen)==1:
-        return sen[0]
+def sum(values):
+    if len(values)==1:
+        return values[0]
     else:
-         return sen[n]+" "+rev(sen[0:n],n-1)
+         return values[0]+sum(values[1:])
          
          
         
-sen = input("Enter the senetence : ")
-sen =  sen.split(" ")
+numbers=[]
+size = int(input("Enter the list size : "))
 
-print(rev(sen,len(sen)-1))
+for index in range(size):
+    val=int(input(f"Enter the {index+1} element : "))
+    numbers.append(val)
+print(sum(numbers))
