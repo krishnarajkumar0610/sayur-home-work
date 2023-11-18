@@ -27,3 +27,8 @@ for index,student in enumerate(students):   # using for loop to traverse in the 
         
 print(f"Pass students list : {pass_std} and their total count is = {pass_count}\n") # displaying the passed students in cs subject
 print(f"fail students list : {fail_std} and their total count is = {fail_count}")   # displaying the failed students in cs subject
+
+
+# Pass students list : ['krishna : 98', 'raj : 87', 'kumar : 50'] and their total count is = 3
+
+# fail students list : ['ramu : 49', 'somu : 25'] and their total count is = 2
