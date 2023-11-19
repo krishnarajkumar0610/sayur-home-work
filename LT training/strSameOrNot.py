@@ -40,6 +40,10 @@ if(not b):
     
 # outputs 
 
+# Enter word one : sayur learning
+# Enter the word two (eg: STR 1:abcde , STR 2: bcdea) :  learningsayur
+# Both Strings are same at 6th time 
+
 # Enter word one : abcd
 # Enter the word two (eg: STR 1:abcde , STR 2: bcdea) : cdab
 # Both Strings are same at 3th time
