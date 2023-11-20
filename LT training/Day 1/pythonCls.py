@@ -7,6 +7,7 @@
 # Find the top 3 marks if all classes are combined.
 # Find the avg mark of students with passing mark in each class and the classes combined.
 # Find which class has the best average mark and least number of failed students.
+
 def findTopthree(mark_details):  # This method is to find top 3 marks in each class
     mark_details=[int(x) for x in mark_details]
     mark_details=sorted(mark_details,reverse=True) # sorting the list in reverse order
@@ -45,9 +46,7 @@ def fingAvgCom(mark_details):       #  this method is to find the avg mark from 
         if mark>=50:    # if any mark is >=50 then it is pass
             sum+=mark   # then adding it to get total marks
     return sum//len(mark_details)  # returning the average mark from the combined class   
-            
-
-    
+             
 def bestAvg_leastFail(average,fails):    # this method is to find the best average and least count 
     max=average[0]  # storing 1st value from the average mark to max 
     min=fails[0]    # storing the 1st value from the fails to min

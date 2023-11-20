@@ -10,11 +10,11 @@
 
 students = ["john", "smith", "david",]  # students list
 
-marks=[
-    [95, 90, 95],   # john marks
-    [90, 85, 82],   # smith marks
-    [95, 49, 82]    # david marks
-]
+marks=  [
+            [95, 90, 95],   # john marks
+            [90, 85, 82],   # smith marks
+            [95, 49, 82]    # david marks
+        ]
 
 marks_dict = {} # creating the empty dict
 

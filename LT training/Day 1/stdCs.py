@@ -13,7 +13,6 @@ pass_count,fail_count=0,0   #assigning 0 to pass and fail count
 
 pass_std,fail_std=[],[] # assigning empty list to pass and fail student list
 
-
 pass_mark=50    # assigning pass mark 50 to pass mark variable
 
 for index,student in enumerate(students):   # using for loop to traverse in the list and enumerate to get index and value

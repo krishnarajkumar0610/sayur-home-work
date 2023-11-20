@@ -19,7 +19,6 @@ tempWord=String_one   # creating temporary variable to store String one
 
 b = False   # assigning b as false
 
-
 if(len(String_one)!=len(String_two)):   # if both String has different lenght we can't find the output
     print(f"Both Strings length are not same. String 1 length {len(String_one)} and String 2 length is {len(String_two)}")
     print(exit(0))  # exiting from the program
