@@ -48,49 +48,49 @@ def fingAvgCom(mark_details):       #  this method is to find the avg mark from 
             
 
     
-def bestAvg_leastFail(average,fails):    
-    max=average[0]
-    min=fails[0]
-    for index in range(1,len(average)):
-        if max<average[index]:
-            max=index
-    for index in range(1,len(fails)):
-        if min>fails[index]:
-            min=fails[index]
+def bestAvg_leastFail(average,fails):    # this method is to find the best average and least count 
+    max=average[0]  # storing 1st value from the average mark to max 
+    min=fails[0]    # storing the 1st value from the fails to min
+    for index in range(1,len(average)): # This for loop is to traversing the  average list
+        if max<average[index]:  # if max is < any element from the average list
+            max=average[index]   # storing the greatest value to max variable   
+    for index in range(1,len(fails)):   # This for loop is to traverse the fails list
+        if min>fails[index]:    # if min is > fail marks
+            min=fails[index]    # store the minimum fail mark to the min variable
             
-    return f"The best average mark is {max} and least fail is {min}"
+    return f"The best average mark is {max} and least fail is {min}"    # returing the the best average mark and least fail count
 
         
 mark_details = input("Enter the dep and marks and seperate it by comma (,) : ")
 topMarks_eachCls={}  # creating empty dict to store top 3 marks in each class
 mark_details = mark_details.split(',')  # split each word by comma
-number_of_subjects=5
-limit = 6
-for index in range(0,len(mark_details),6):   
+limit = 6   
+increment_limit=limit
+for index in range(0,len(mark_details),increment_limit):   
     # storing top 1 mark from each class
     topMarks_eachCls[mark_details[index]]=findTopthree(mark_details[index+1:limit])       
     limit = limit+6    
 #sending the combined class
 topThree_comClass = findCombinedMark(mark_details)   # storing top 3 marks from combined class
 
-ec_avg = {}
-failed={}
-avg=[]
-fail=[]
+ec_avg = {} # creating the empty dict to store the department and average mark from the department
+failed={}   # creating the empty dict to store the department and fail count in each department 
+avg=[]  # storing the each average marks from each class to the avg list
+fail=[] # storing the each fail count from each class to the fail list
 limit=6
 
-for index in range(0,len(mark_details),6):   
-    val=fingAvgEc(mark_details[index+1:limit])
-    avg.append(val)
-    ec_avg[mark_details[index]]=val
-    val=fingAvgEc(mark_details[index+1:limit],False)
-    fail.append(val)
-    failed[mark_details[index]]=val
-    limit = limit+6  
+for index in range(0,len(mark_details),increment_limit):    # this loop is to traverse the mark detail list
+    val=fingAvgEc(mark_details[index+1:limit])  
+    avg.append(val) # storing the avg mark in the list
+    ec_avg[mark_details[index]]=val # adding the avg value in the each class dict
+    val=fingAvgEc(mark_details[index+1:limit],False)    
+    fail.append(val)    # storing the fail count in the fail list 
+    failed[mark_details[index]]=val # adding the fsil count in the failed dict
+    limit = limit+6     # incrementing the limit to send the marks alone to the function
     
-avg_combined=fingAvgCom(mark_details)
+avg_combined=fingAvgCom(mark_details)   # storing the avg mark from the combined class to average class variable
     
-best_avg_fails=bestAvg_leastFail(avg,fail) 
+best_avg_fails=bestAvg_leastFail(avg,fail)  # storing the best average and least fail count in the best and least fail count variable
     
       
 
