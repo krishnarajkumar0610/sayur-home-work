@@ -42,32 +42,19 @@ if(not b):
 
 # Enter word one : sayur learning
 # Enter the word two (eg: STR 1:abcde , STR 2: bcdea) :  learningsayur
-# Both Strings are same at 6th time 
+# Both Strings are same at 5th time
 
-# Enter word one : abcd
-# Enter the word two (eg: STR 1:abcde , STR 2: bcdea) : cdab
+# Enter word one : 123456
+# Enter the word two (eg: STR 1:abcde , STR 2: bcdea) : 456123
 # Both Strings are same at 3th time
-
-# Enter word one : abcd
-# Enter the word two (eg: STR 1:abcde , STR 2: bcdea) : cdba
-# Both String has different characters. String 1 : abcd and String 2 : cdba
-
-# Enter word one : abcd
-# Enter the word two (eg: STR 1:abcde , STR 2: bcdea) : cdba
-# Both String has different characters. String 1 : abcd and String 2 : cdba
 
 # Enter word one : 123456
 # Enter the word two (eg: STR 1:abcde , STR 2: bcdea) : 412356
 # Both String has different characters. String 1 : 123456 and String 2 : 412356
 
-# Enter word one : krishna
-# Enter the word two (eg: STR 1:abcde , STR 2: bcdea) : hnakris
-# Both Strings are same at 5th time
+# Enter word one : abcd
+# Enter the word two (eg: STR 1:abcde , STR 2: bcdea) : cdab
+# Both Strings are same at 2th time
 
-# Enter word one : krishna
-# Enter the word two (eg: STR 1:abcde , STR 2: bcdea) : shnarik
-# Both String has different characters. String 1 : krishna and String 2 : shnarik
-
-# Enter word one : krishna
-# Enter the word two (eg: STR 1:abcde , STR 2: bcdea) : jar
-# Both Strings length are not same. String 1 length 7 and String 2 length is 3
+# Both String has different characters. String 1 : abcd and 
+# String 2 : cdba
