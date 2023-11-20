@@ -1,3 +1,5 @@
+# a
+# aba
 # abacaba
 # abacabadabacaba
 # abacabadabacabaeabacabadabacaba
