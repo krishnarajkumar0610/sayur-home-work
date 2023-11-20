@@ -1,7 +1,3 @@
-# Problem 1
-# Generate the following output using for loop. Go until g.
-# a
-# aba
 # abacaba
 # abacabadabacaba
 # abacabadabacabaeabacabadabacaba
