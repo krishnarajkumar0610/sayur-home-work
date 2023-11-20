@@ -3,8 +3,6 @@
 # abacabadabacabaeabacabadabacaba
 
 # look at the output and find the pattern. Hint - add next letter in the alphabet in each row
-
-
 let = input("Enter the starting letter you need : ")    # asking user to type what character should begins
 
 let = ord(let)  # converting it into number
