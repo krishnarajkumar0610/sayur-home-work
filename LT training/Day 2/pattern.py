@@ -1,7 +1,7 @@
 # Problem 1
 # Print the following pattern
 # 1
-# 212
+# 212   
 # 32123
 # 4321234
 # 543212345
