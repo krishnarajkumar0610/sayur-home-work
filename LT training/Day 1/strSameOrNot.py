@@ -24,7 +24,8 @@ if(len(String_one)!=len(String_two)):   # if both String has different lenght we
     print(exit(0))  # exiting from the program
     
 for i in range(1,len(String_one)+1):    # This for loop is to traverse the String 1
-    tempStr=tempWord[1:]+tempWord[0]    # each time slicing the string and store it in temp String 
+    store_word=slice(1,len(tempWord)) 
+    tempStr=tempWord[store_word]+tempWord[0]    # each time slicing the string and store it in temp String 
     if(tempStr in String_two):  # checking the sliced String is same as String 2
         print(f"Both Strings are same at {i+1}th time") # if the Strings are same then it is the output
         b=True   # assigning True to b because we found the String to assigning True
