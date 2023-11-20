@@ -90,7 +90,7 @@ for index in range(0,len(mark_details),increment_limit):    # this loop is to tr
     
 avg_combined=fingAvgCom(mark_details)   # storing the avg mark from the combined class to average class variable
     
-best_avg_fails=bestAvg_leastFail(avg,fail)  # storing the best average and least fail count in the best and least fail count variable
+best_avg_fails=bestAvg_leastFail(avg,fail)  # storing the best average and least fail count in the best and
     
       
 
@@ -105,3 +105,19 @@ print(f"The average mark in combined class = {avg_combined}\n")
 print(f"Fail counts in each class = {failed}\n")
 
 print(best_avg_fails)
+
+# output
+
+# Enter the dep and marks and seperate it by comma (,) : cse,43,53,24,64,57,csd,53,24,66,75,42,csbs,64,23,49,46,86
+
+# Top 3 marks in each class =  {'cse': [64, 57, 53], 'csd': [75, 66, 53], 'csbs': [86, 64, 49]}
+
+# Top 3 marks in combained class = [86, 75, 66]
+
+# The average marks in each class = {'cse': 34, 'csd': 38, 'csbs': 30}
+
+# The average mark in combined class = 28
+
+# Fail counts in each class = {'cse': 2, 'csd': 2, 'csbs': 3}
+
+# The best average mark is 38 and least fail is 2
