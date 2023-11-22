@@ -15,17 +15,17 @@ while(point!=winning_point):    # this while loop will run unitil my point reach
     
     val=random.randint(0,6) # generating the random number from 0 to 6
     
-    if val == 0:    # if my number is 0 then i can't continue the game
-        break   # and coming out
+    if val == 0:                         # if my number is 0 then i can't continue the game
+        break                            # and coming out
     
-    elif val % 2 == 0:  # if the number is even 
-        point+=2    # adding +2 point in my point
+    elif val % 2 == 0:                  # if the number is even 
+        point+=2                        # adding +2 point in my point
         
     elif val % 2 !=0 and val == 1 or 3:    
-        # if my number is odd then it is 1 or 3 
-         continue   # then i want to skip to add the point
+                                        # if my number is odd then it is 1 or 3 
+         continue                       # then i want to skip to add the point
     
-    elif val == 5:  # if my number is 5 then adding +5 to the point
+    elif val == 5:                      # if my number is 5 then adding +5 to the point
         point+=3
 
 if point == 0:
