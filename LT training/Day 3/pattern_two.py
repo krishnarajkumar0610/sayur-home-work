@@ -1,4 +1,4 @@
-# Problem 1
+# Problem 2
 # Print the following pattern
 # 1
 # 1 1
