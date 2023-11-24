@@ -32,11 +32,13 @@ def display(board): # display the board
     
 def play(board,player,row,col): # this method is to apply the initial of the player
     if board[row][col] == '*':     # if the particular position has * then apply the initial
-        board[row][col] = player        
+        board[row][col] = player
+                
     elif board[row][col]!=player:   # if the particular position has other initial then apply current initial
         board[row][col]=player  
         display(board)
-        return 1    # adding point to the player           
+        return 1    # adding point to the player  
+             
     display(board)  # displaying the board
     return 0        # adding 0 point
 
