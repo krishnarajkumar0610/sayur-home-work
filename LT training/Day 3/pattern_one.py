@@ -7,7 +7,7 @@
 #       1 4 6 4 1
 
 n = int(input("Enter the number of rows you need : "))
-num = int(input("Enter the number of rows you need : "))
+num = int(input("Enter the number to start : "))
 prev = []
 tot_row = []
 
@@ -31,7 +31,7 @@ for index in range(1,n+1):  # this for loop is to go up to nth row
 # output
 
 # Enter the number of rows you need : 5
-# Enter the number of rows you need : 1
+# Enter the number to start : 1
 #      1 
 #     1 1 
 #    1 2 1 
