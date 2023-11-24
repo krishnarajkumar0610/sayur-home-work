@@ -32,8 +32,8 @@ for index in range(1,n+1):  # this for loop is to go up to nth row
 
 # Enter the number of rows you need : 5
 # Enter the number of rows you need : 1
-# 1         
-# 1 1       
-# 1 2 1     
-# 1 3 3 1   
-# 1 4 6 4 1 
+#      1 
+#     1 1 
+#    1 2 1 
+#   1 3 3 1 
+#  1 4 6 4 1 
