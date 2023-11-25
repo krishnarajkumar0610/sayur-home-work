@@ -16,6 +16,7 @@ def setStar(board,size):    # this method is to set star in the board
     for outer in range(size):   # this loops is to set star
         for inner in range(size):
             board[outer].append('*')  
+    display(board)
             
 def roll(): # this method is to generate row and col number
     num = random.randint(1,6)   # generating any number in between 1 to 6
@@ -69,6 +70,14 @@ else:   # if point b is 5
 '''
 output
 
+--------------------------------------------------
+| * | | * | | * | | * | | * | | * | 
+| * | | * | | * | | * | | * | | * | 
+| * | | * | | * | | * | | * | | * | 
+| * | | * | | * | | * | | * | | * | 
+| * | | * | | * | | * | | * | | * | 
+| * | | * | | * | | * | | * | | * | 
+--------------------------------------------------
 --------------------------------------------------
 | * | | * | | * | | * | | * | | * | 
 | * | | * | | * | | * | | * | | * | 
