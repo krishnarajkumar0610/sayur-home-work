@@ -16,7 +16,7 @@ for index in range(1,n+1):  # this for loop is to go up to nth row
     tot_row.append(num) # appending the value 1 at 1st
     tot_row.extend(prev)    # extending previous value to the list
     for val in tot_row: # printing the elements from the list
-        print(val,end='  ')
+        print(val,end=' ')
     print('\t') 
     prev.clear()    # clearing the previous list
     for i in range(len(tot_row)):   # this loop is to append the previous row elements in the previous list
