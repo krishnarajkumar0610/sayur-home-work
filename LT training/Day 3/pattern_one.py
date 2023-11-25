@@ -23,7 +23,7 @@ for index in range(1,n+1):  # this for loop is to go up to nth row
         if i == len(tot_row)-1: # if my i is > list length then it causes index out of bound 
             prev.append(num)
             break
-        ans = int(tot_row[i])+int(tot_row[i+1]) # adding pair elements and storing it in the prev list
+        ans = tot_row[i]+tot_row[i+1] # adding pair elements and storing it in the prev list
         prev.append(ans)    
     tot_row.clear() # clearing the total list 
     
