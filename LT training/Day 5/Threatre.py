@@ -18,14 +18,21 @@ def display(seats):
         row+=1
         
 def bookTickets(seats):
+    rows=['A','B','C','D','E']
     print("-----------------------------------")
     display(seats)
     print("-----------------------------------")
-    row = int(input("Enter the row : "))
+    try:
+        row = int(rows.index(input("Enter the row : ").upper()))
+    except Exception:
+            print("Enter valid row")
+            return
     seat = int(input("Enter number of seats you need : "))
-    row-=1
-    if seats[row].count('o')<seat:
+    if seats[row].count('o')<seat :
         print("Not have maximum seats")
+        return
+    elif seat<=0:
+        print("Enter valid seat numbers")
         return
     else:
         booked_slots=[]
@@ -39,13 +46,14 @@ def bookTickets(seats):
                 booked_slots.append(f"{chr(row_index)+str(index+1)}")
                 seat-=1 
         print(f"Your booked Slots : {booked_slots}")    
+        
        
 seats = [
     ['o','o','o','o','o'],
     ['o','o','o','o','o'],
     ['o','o','o','o','o'],
     ['o','o','o','o','o'],
-    ['o','o','o','o','o'],
+    ['o','o','o','o','o']
 ]
 
 while(True):
@@ -57,7 +65,9 @@ while(True):
     if opt == 1:
         bookTickets(seats)
     elif opt == 2:
-        print("Thank you...",exit(0))
+        print("Thank you...Available seats are \n")
+        display(seats)
+        print(exit(0))
     else:
         print("Enter correct option")
         
@@ -74,92 +84,96 @@ while(True):
 # Row D : o o o o o
 # Row E : o o o o o
 # -----------------------------------
-# Enter the row : 1
+# Enter the row : 3
+# Enter valid row
+# 1.Book Tickets
+# 2.Close App
+# Enter the option : 1
+# -----------------------------------
+# Row A : o o o o o
+# Row B : o o o o o
+# Row C : o o o o o
+# Row D : o o o o o
+# Row E : o o o o o
+# -----------------------------------
+# Enter the row : c
+# Enter number of seats you need : 3
+# Your booked Slots : ['C1', 'C2', 'C3']
+# 1.Book Tickets
+# 2.Close App
+# Enter the option : 1
+# -----------------------------------
+# Row A : o o o o o
+# Row B : o o o o o
+# Row C : - - - o o
+# Row D : o o o o o
+# Row E : o o o o o
+# -----------------------------------
+# Enter the row : e
+# Enter number of seats you need : 1
+# Your booked Slots : ['E1']
+# 1.Book Tickets
+# 2.Close App
+# Enter the option : 1
+# -----------------------------------
+# Row A : o o o o o
+# Row B : o o o o o
+# Row C : - - - o o
+# Row D : o o o o o
+# Row E : - o o o o
+# -----------------------------------
+# Enter the row : a
+# Enter number of seats you need : 4
+# Your booked Slots : ['A1', 'A2', 'A3', 'A4']
+# 1.Book Tickets
+# 2.Close App
+# Enter the option : 1
+# -----------------------------------
+# Row A : - - - - o
+# Row B : o o o o o
+# Row C : - - - o o
+# Row D : o o o o o
+# Row E : - o o o o
+# -----------------------------------
+# Enter the row : s
+# Enter valid row
+# 1.Book Tickets
+# 2.Close App
+# Enter the option : 4
+# Enter correct option
+# 1.Book Tickets
+# 2.Close App
+# Enter the option : 1
+# -----------------------------------
+# Row A : - - - - o
+# Row B : o o o o o
+# Row C : - - - o o
+# Row D : o o o o o
+# Row E : - o o o o
+# -----------------------------------
+# Enter the row : d
+# Enter number of seats you need : 4
+# Your booked Slots : ['D1', 'D2', 'D3', 'D4']
+# 1.Book Tickets
+# 2.Close App
+# Enter the option : 1
+# -----------------------------------
+# Row A : - - - - o
+# Row B : o o o o o
+# Row C : - - - o o
+# Row D : - - - - o
+# Row E : - o o o o
+# -----------------------------------
+# Enter the row : b
 # Enter number of seats you need : 2
-# Your booked Slots : ['A1', 'A2']
-# 1.Book Tickets
-# 2.Close App
-# Enter the option : 1
-# -----------------------------------
-# Row A : - - o o o
-# Row B : o o o o o
-# Row C : o o o o o
-# Row D : o o o o o
-# Row E : o o o o o
-# -----------------------------------
-# Enter the row : 1
-# Enter number of seats you need : 3
-# Your booked Slots : ['A3', 'A4', 'A5']
-# 1.Book Tickets
-# 2.Close App
-# Enter the option : 1
-# -----------------------------------
-# Row A : - - - - -
-# Row B : o o o o o
-# Row C : o o o o o
-# Row D : o o o o o
-# Row E : o o o o o
-# -----------------------------------
-# Enter the row : 1
-# Enter number of seats you need : 3
-# Not have maximum seats
-# 1.Book Tickets
-# 2.Close App
-# Enter the option : 1
-# Row A : - - - - -
-# PS F:\Sayur learning\sayur-home-work>  f:; cd 'f:\Sayur learning\sayur-home-work'; & 'C:\Users\User-Hp\AppData\Local\Programs\Python\Python312\python.exe' 'c:\Users\User-Hp\.vscode\extensions\ms-python.python-2023.20.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher' '63161' '--' 'f:\Sayur learning\sayur-home-work\LT Training\Day 5\Threatre.py' 
-# 1.Book Tickets
-# 2.Close App        
-# Enter the option : 1
-# -----------------------------------
-# Row A : o o o o o
-# Row B : o o o o o
-# Row C : o o o o o
-# Row D : o o o o o
-# Row E : o o o o o
-# -----------------------------------
-# Enter the row : 4
-# Enter number of seats you need : 5
-# Your booked Slots : ['D1', 'D2', 'D3', 'D4', 'D5']
-# 1.Book Tickets
-# 2.Close App
-# Enter the option : 1
-# -----------------------------------
-# Row A : o o o o o
-# Row B : o o o o o
-# Row C : o o o o o
-# Row D : - - - - -
-# Row E : o o o o o
-# -----------------------------------
-# Enter the row : 4
-# Enter number of seats you need : 5
-# Not have maximum seats
-# 1.Book Tickets
-# 2.Close App
-# Enter the option : 1
-# -----------------------------------
-# Row A : o o o o o
-# Row B : o o o o o
-# Row C : o o o o o
-# Row D : - - - - -
-# Row E : o o o o o
-# -----------------------------------
-# Enter the row : 2
-# Enter number of seats you need : 3
-# Your booked Slots : ['B1', 'B2', 'B3']
-# 1.Book Tickets
-# 2.Close App
-# Enter the option : 1
-# -----------------------------------
-# Row A : o o o o o
-# Row B : - - - o o
-# Row C : o o o o o
-# Row D : - - - - -
-# Row E : o o o o o
-# -----------------------------------
-# Enter the row : 2
-# Enter number of seats you need : 2
-# Your booked Slots : ['B4', 'B5']
+# Your booked Slots : ['B1', 'B2']
 # 1.Book Tickets
 # 2.Close App
 # Enter the option : 2
+# Thank you...Available seats are 
+
+# Row A : - - - - o
+# Row B : - - o o o
+# Row C : - - - o o
+# Row D : - - - - o
+# Row E : - o o o o
