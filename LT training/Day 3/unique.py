@@ -2,7 +2,9 @@
 # From the same file as above, read from the file, count the number of unique 4 letter words and it no of occurrences
 # for each word. Write this information at the end of file under the heading "Summary of 4 letter words"
 
-
+# sample input : 
+# a road path channel or course by which something passes Special ships clear passages through 
+# the ices nasal passages
 def check(words,word):
     if word in words:               # if the word in unique word
         return True                 # then returning true
@@ -11,7 +13,7 @@ def check(words,word):
 words=[]                            # to store the words from the file
 unique_words=[]                     # to store unique words
 uniqueWords_withCount={}               # to store unique words and its count
-
+length = 4
 
 try:                                                                    # using exception Handling to check my file is available or not
     with open('F:\Sayur learning\sayur-home-work\LT Training\Day 3\passage_two.txt','r') as file:   # reading my file
@@ -19,7 +21,7 @@ try:                                                                    # using 
             for word in word_row.strip().lower().split(' '):
                 words.append(word)                           
     for index,index_word in enumerate(words):                           # taking the index and its word     
-        if len(index_word) == 4 and not check(unique_words,index_word): # if my word length is 4 and it is not in unique list
+        if len(index_word) == length and not check(unique_words,index_word): # if my word length is 4 and it is not in unique list
             unique_words.append(index_word)                             # adding it in unique list
             count=0                                                     # setting counter as 0
             for j in range(index,len(words)):                           # this loop is to traverse the words list
