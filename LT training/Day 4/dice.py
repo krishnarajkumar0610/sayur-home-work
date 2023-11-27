@@ -53,11 +53,14 @@ while point_A!=5 and point_B!=5:
     index=0 # assigning 0 to index
     row=roll()  # calling roll() to get any number from 1 to 6 to store in row
     col=roll()  # calling roll() to get any number from 1 to 6 to store in col
+    
     point_A+=play(board,players[index],row,col) # calling the play method and adding the returning point to point a
     print(f"Current Point of {players[index]} is {point_A}")
+    
     index+=1    # incrementing the index
     row=roll()  # calling roll() to get any number from 1 to 6 to store in row
     col=roll()  # calling roll() to get any number from 1 to 6 to store in col
+    
     point_B+=play(board,players[index],row,col) # calling the play method and adding the returning point to point b
     print(f"Current Point of {players[index]} is {point_B}")
     
