@@ -11,7 +11,7 @@ def display(seats):
         row += 1
 
 
-def calculate_ticket_price(row, seat, total_rows):
+def calculate_ticket_price(row):
     if row <= 3:
         return 100
     elif 4 <= row <= 5:
@@ -49,7 +49,7 @@ def book_tickets(seats):
             if seat == 0:
                 break
             if seats[row][index] == 'o':
-                price = calculate_ticket_price(row + 1, index + 1, len(seats))
+                price = calculate_ticket_price(row + 1)
                 if index == 0 or index == len(seats[row]) - 1:
                     price -= 50  # Discount for seats close to the wall
                 seats[row][index] = '-'
